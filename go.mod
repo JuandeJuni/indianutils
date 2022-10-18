@@ -1,4 +1,4 @@
-module github.com/JuandeJuni/indiansites/utils
+module github.com/JuandeJuni/indianutils
 
 go 1.19
 
