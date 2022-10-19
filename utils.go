@@ -487,8 +487,8 @@ type MyntrProduct struct {
 	} `json:"info"`
 }
 
-func ChangeProxy(loge *log.Logger) http.Transport {
-	proxylist, _ := ReadLines("proxies.txt")
+func ChangeProxy(loge *log.Logger, dir string) http.Transport {
+	proxylist, _ := ReadLines(dir)
 	randomIndex := rand.Intn(len(proxylist))
 	proxy := proxylist[randomIndex]
 	plist := strings.Split(proxy, ":")
